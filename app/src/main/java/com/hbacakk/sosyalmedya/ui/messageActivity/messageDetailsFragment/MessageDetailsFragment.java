@@ -1,22 +1,22 @@
 package com.hbacakk.sosyalmedya.ui.messageActivity.messageDetailsFragment;
 
+import static android.content.Context.INPUT_METHOD_SERVICE;
+
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 
 import com.hbacakk.sosyalmedya.R;
+import com.hbacakk.sosyalmedya.data.models.Message;
 import com.hbacakk.sosyalmedya.data.models.User;
 import com.hbacakk.sosyalmedya.databinding.FragmentMessageDetailsBinding;
 import com.hbacakk.sosyalmedya.ui.BaseFragment;
-import com.hbacakk.sosyalmedya.ui.messageActivity.conversationsFragment.ConversationsFragmentDirections;
 import com.hbacakk.sosyalmedya.viewmodels.MainViewModel;
 
 public class MessageDetailsFragment extends BaseFragment<FragmentMessageDetailsBinding> {
@@ -39,10 +39,10 @@ public class MessageDetailsFragment extends BaseFragment<FragmentMessageDetailsB
 
     private void initialize() {
         //region:
-        mainViewModel=new ViewModelProvider(this).get(MainViewModel.class);
+        mainViewModel = new ViewModelProvider(this).get(MainViewModel.class);
         //endregion
         //region:
-        messageAdapter=new MessageAdapter("1",mainViewModel.getMessages());
+        messageAdapter = new MessageAdapter("1", mainViewModel.getMessages());
         binding.recyclerViewMessage.setAdapter(messageAdapter);
         //endregion
 
@@ -53,12 +53,24 @@ public class MessageDetailsFragment extends BaseFragment<FragmentMessageDetailsB
 
         binding.setUser(user);
 
+        binding.recyclerViewMessage.smoothScrollToPosition(messageAdapter.getItemCount());
+
+        binding.imageViewSend.setOnClickListener(view -> {
+            if (binding.inputMessage.getText().toString().trim().isEmpty() || binding.inputMessage.getText().toString().trim().length() < 1) {
+                binding.inputMessage.setError("Mesaj yazınız");
+            } else {
+                messageAdapter.addItem(new Message("1", binding.inputMessage.getText().toString().trim()));
+                binding.inputMessage.setText("");
+
+                InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(getActivity().getCurrentFocus().getWindowToken(), 0);
+                binding.recyclerViewMessage.smoothScrollToPosition(messageAdapter.getItemCount());
+            }
+        });
 
         //region: OnBack
-        binding.imageViewBack.setOnClickListener(view->{
-            Navigation.findNavController(binding.getRoot())
-                    .navigate(MessageDetailsFragmentDirections.actionMessageDetailsFragmentToUserFragment());
-        });
+        binding.imageViewBack.setOnClickListener(view -> Navigation.findNavController(binding.getRoot())
+                .navigate(MessageDetailsFragmentDirections.actionMessageDetailsFragmentToUserFragment()));
         //endregion
     }
 }

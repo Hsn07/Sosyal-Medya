@@ -24,7 +24,7 @@ public class PostAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     ArrayList<Item> itemArrayList;
     Activity activity;
 
-    public PostAdapter(ArrayList<Item> itemArrayList,Activity activity) {
+    public PostAdapter(ArrayList<Item> itemArrayList, Activity activity) {
         this.itemArrayList = itemArrayList;
         this.activity = activity;
     }
@@ -52,13 +52,14 @@ public class PostAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             ));
         }
     }
+
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         if (getItemViewType(position) == Constants.ROW_TYPE_TITLE) {
             ((ViewHolderTitle) holder).setData((String) itemArrayList.get(position).getData());
         } else if (getItemViewType(position) == Constants.ROW_TYPE_FEEDS) {
             ((ViewHolderFeeds) holder).setData((ArrayList<Item>) itemArrayList.get(position).getData());
-        } else if (getItemViewType(position)==Constants.ROW_TYPE_POST){
+        } else if (getItemViewType(position) == Constants.ROW_TYPE_POST) {
             ((ViewHolderPost) holder).setData((Post) itemArrayList.get(position).getData());
         }
     }
@@ -87,20 +88,17 @@ public class PostAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             itemPostBinding.imageUserImage.setImageResource(post.imageId);
             itemPostBinding.imagePost.setImageResource(post.postId);
             itemPostBinding.setPost(post);
-            itemPostBinding.imageViewSettings.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    PopupMenu popupMenu=new PopupMenu(activity,view);
-                    popupMenu.getMenuInflater().inflate(R.menu.popup_menu,popupMenu.getMenu());
-                    popupMenu.show();
-                }
+            itemPostBinding.imageViewSettings.setOnClickListener(view -> {
+                PopupMenu popupMenu = new PopupMenu(activity, view);
+                popupMenu.getMenuInflater().inflate(R.menu.popup_menu, popupMenu.getMenu());
+                popupMenu.show();
             });
             itemPostBinding.executePendingBindings();
         }
 
     }
 
-    public class ViewHolderTitle extends RecyclerView.ViewHolder {
+    public static class ViewHolderTitle extends RecyclerView.ViewHolder {
         ItemTitleBinding binding;
 
         public ViewHolderTitle(ItemTitleBinding binding) {
@@ -114,7 +112,7 @@ public class PostAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         }
     }
 
-    public class ViewHolderFeeds extends RecyclerView.ViewHolder {
+    public static class ViewHolderFeeds extends RecyclerView.ViewHolder {
         ItemFeedContainerBinding binding;
 
         public ViewHolderFeeds(ItemFeedContainerBinding binding) {

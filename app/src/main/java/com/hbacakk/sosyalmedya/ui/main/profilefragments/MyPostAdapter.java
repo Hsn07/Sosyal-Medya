@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.hbacakk.sosyalmedya.R;
 import com.hbacakk.sosyalmedya.data.models.Feed;
-import com.hbacakk.sosyalmedya.data.models.Post;
 import com.hbacakk.sosyalmedya.databinding.ItemMyPostBinding;
 
 import java.util.ArrayList;
@@ -25,7 +24,7 @@ public class MyPostAdapter extends RecyclerView.Adapter<MyPostAdapter.ViewHolder
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new MyPostAdapter.ViewHolder(DataBindingUtil.inflate(
+        return new ViewHolder(DataBindingUtil.inflate(
                 LayoutInflater.from(parent.getContext()),
                 R.layout.item_my_post,
                 parent,
@@ -43,7 +42,7 @@ public class MyPostAdapter extends RecyclerView.Adapter<MyPostAdapter.ViewHolder
         return feedArrayList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
         ItemMyPostBinding postBinding;
 
         public ViewHolder(ItemMyPostBinding postBinding) {

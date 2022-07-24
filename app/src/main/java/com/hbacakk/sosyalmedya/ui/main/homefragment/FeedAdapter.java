@@ -4,16 +4,12 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.hbacakk.sosyalmedya.R;
 import com.hbacakk.sosyalmedya.data.models.Feed;
 import com.hbacakk.sosyalmedya.data.models.Item;
 import com.hbacakk.sosyalmedya.databinding.ItemAddFeedBinding;
 import com.hbacakk.sosyalmedya.databinding.ItemFeedBinding;
-import com.hbacakk.sosyalmedya.databinding.ItemFeedContainerBinding;
-import com.hbacakk.sosyalmedya.databinding.ItemTitleBinding;
 import com.hbacakk.sosyalmedya.utilities.Constants;
 
 import java.util.ArrayList;
@@ -56,7 +52,7 @@ public class FeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     @Override
     public int getItemViewType(int position) {
-        if (itemArrayList.get(position)==null)
+        if (itemArrayList.get(position) == null)
             return -1;
 
         return itemArrayList.get(position).getRowType();
@@ -81,6 +77,7 @@ public class FeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         }
 
     }
+
     public class ViewHolderAddFeed extends RecyclerView.ViewHolder {
         ItemAddFeedBinding addFeedBinding;
 

@@ -1,6 +1,6 @@
 package com.hbacakk.sosyalmedya.data.models;
 
-public class Item <T>{
+public class Item<T> {
     int rowType;
     T data;
 

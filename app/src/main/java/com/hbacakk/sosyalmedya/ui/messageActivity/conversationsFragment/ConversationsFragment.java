@@ -1,14 +1,12 @@
 package com.hbacakk.sosyalmedya.ui.messageActivity.conversationsFragment;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
-import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 
@@ -16,8 +14,6 @@ import com.hbacakk.sosyalmedya.R;
 import com.hbacakk.sosyalmedya.data.models.User;
 import com.hbacakk.sosyalmedya.databinding.FragmentConversationsBinding;
 import com.hbacakk.sosyalmedya.ui.BaseFragment;
-import com.hbacakk.sosyalmedya.ui.main.MainActivity;
-import com.hbacakk.sosyalmedya.ui.messageActivity.MessageActivity;
 import com.hbacakk.sosyalmedya.viewmodels.MainViewModel;
 
 public class ConversationsFragment extends BaseFragment<FragmentConversationsBinding> implements ConversationListener {
@@ -41,13 +37,25 @@ public class ConversationsFragment extends BaseFragment<FragmentConversationsBin
         binding.recyclerViewConversations.setAdapter(userAdapter);
         //endregion
         //region:
-        binding.imageViewBack.setOnClickListener(new View.OnClickListener() {
+        binding.imageViewBack.setOnClickListener(view -> getActivity().finish());
+        //endregion
+
+        binding.inputContacts.addTextChangedListener(new TextWatcher() {
             @Override
-            public void onClick(View view) {
-                getActivity().finish();
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                userAdapter.search(charSequence.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
             }
         });
-        //endregion
     }
 
     @Override

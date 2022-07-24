@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment;
 public abstract class BaseFragment<T extends ViewDataBinding> extends Fragment {
 
     public T binding;
+
     public abstract int getLayoutResId();
 
     @CallSuper

@@ -32,32 +32,31 @@ public class MainRepository {
     };
 
 
-
     public final Item[] feeds = new Item[]{
-            new Item(Constants.ROW_TYPE_ADD_FEED,null),
-            new Item(Constants.ROW_TYPE_FEED,new Feed(R.drawable.my_post_1)),
-            new Item(Constants.ROW_TYPE_FEED,new Feed(R.drawable.my_post_2)),
-            new Item(Constants.ROW_TYPE_FEED,new Feed(R.drawable.my_post_3)),
-            new Item(Constants.ROW_TYPE_FEED,new Feed(R.drawable.my_post_1)),
-            new Item(Constants.ROW_TYPE_FEED,new Feed(R.drawable.my_post_2)),
-            new Item(Constants.ROW_TYPE_FEED,new Feed(R.drawable.my_post_3)),
-            new Item(Constants.ROW_TYPE_FEED,new Feed(R.drawable.my_post_1)),
-            new Item(Constants.ROW_TYPE_FEED,new Feed(R.drawable.my_post_2)),
-            new Item(Constants.ROW_TYPE_FEED,new Feed(R.drawable.my_post_3))
+            new Item(Constants.ROW_TYPE_ADD_FEED, null),
+            new Item(Constants.ROW_TYPE_FEED, new Feed(R.drawable.my_post_1)),
+            new Item(Constants.ROW_TYPE_FEED, new Feed(R.drawable.my_post_2)),
+            new Item(Constants.ROW_TYPE_FEED, new Feed(R.drawable.my_post_3)),
+            new Item(Constants.ROW_TYPE_FEED, new Feed(R.drawable.my_post_1)),
+            new Item(Constants.ROW_TYPE_FEED, new Feed(R.drawable.my_post_2)),
+            new Item(Constants.ROW_TYPE_FEED, new Feed(R.drawable.my_post_3)),
+            new Item(Constants.ROW_TYPE_FEED, new Feed(R.drawable.my_post_1)),
+            new Item(Constants.ROW_TYPE_FEED, new Feed(R.drawable.my_post_2)),
+            new Item(Constants.ROW_TYPE_FEED, new Feed(R.drawable.my_post_3))
     };
     public final Item[] posts = new Item[]{
-            new Item(Constants.ROW_TYPE_TITLE,"Feeds"),
-            new Item(Constants.ROW_TYPE_FEEDS,new ArrayList<Item>(Arrays.asList(feeds))),
-            new Item(Constants.ROW_TYPE_POST,new Post(R.drawable.post_user_1, R.drawable.post_1, "Dennis Reynolds", "2 hrs ago", "5.2K", "1.1K", "362")),
-            new Item(Constants.ROW_TYPE_POST,new Post(R.drawable.post_user_2, R.drawable.post_2, "Charlie Kelly", "4 hrs ago", "5.2K", "1.1K", "362")),
-            new Item(Constants.ROW_TYPE_POST,new Post(R.drawable.post_user_1, R.drawable.post_1, "Dennis Reynolds", "2 hrs ago", "5.2K", "1.1K", "362")),
-            new Item(Constants.ROW_TYPE_POST,new Post(R.drawable.post_user_2, R.drawable.post_2, "Charlie Kelly", "4 hrs ago", "5.2K", "1.1K", "362")),
-            new Item(Constants.ROW_TYPE_POST,new Post(R.drawable.post_user_1, R.drawable.post_1, "Dennis Reynolds", "2 hrs ago", "5.2K", "1.1K", "362")),
-            new Item(Constants.ROW_TYPE_POST,new Post(R.drawable.post_user_2, R.drawable.post_2, "Charlie Kelly", "4 hrs ago", "5.2K", "1.1K", "362")),
-            new Item(Constants.ROW_TYPE_POST,new Post(R.drawable.post_user_1, R.drawable.post_1, "Dennis Reynolds", "2 hrs ago", "5.2K", "1.1K", "362")),
-            new Item(Constants.ROW_TYPE_POST,new Post(R.drawable.post_user_2, R.drawable.post_2, "Charlie Kelly", "4 hrs ago", "5.2K", "1.1K", "362")),
-            new Item(Constants.ROW_TYPE_POST,new Post(R.drawable.post_user_1, R.drawable.post_1, "Dennis Reynolds", "2 hrs ago", "5.2K", "1.1K", "362")),
-            new Item(Constants.ROW_TYPE_POST,new Post(R.drawable.post_user_2, R.drawable.post_2, "Charlie Kelly", "4 hrs ago", "5.2K", "1.1K", "362"))
+            new Item(Constants.ROW_TYPE_TITLE, "Feeds"),
+            new Item(Constants.ROW_TYPE_FEEDS, new ArrayList<Item>(Arrays.asList(feeds))),
+            new Item(Constants.ROW_TYPE_POST, new Post(R.drawable.post_user_2, R.drawable.post_2, "Dennis Reynolds", "2 hrs ago", "5.2K", "1.1K", "362")),
+            new Item(Constants.ROW_TYPE_POST, new Post(R.drawable.post_user_1, R.drawable.post_1, "Charlie Kelly", "4 hrs ago", "5.2K", "1.1K", "362")),
+            new Item(Constants.ROW_TYPE_POST, new Post(R.drawable.post_user_1, R.drawable.post_1, "Dennis Reynolds", "2 hrs ago", "5.2K", "1.1K", "362")),
+            new Item(Constants.ROW_TYPE_POST, new Post(R.drawable.post_user_2, R.drawable.post_2, "Charlie Kelly", "4 hrs ago", "5.2K", "1.1K", "362")),
+            new Item(Constants.ROW_TYPE_POST, new Post(R.drawable.post_user_1, R.drawable.post_1, "Dennis Reynolds", "2 hrs ago", "5.2K", "1.1K", "362")),
+            new Item(Constants.ROW_TYPE_POST, new Post(R.drawable.post_user_2, R.drawable.post_2, "Charlie Kelly", "4 hrs ago", "5.2K", "1.1K", "362")),
+            new Item(Constants.ROW_TYPE_POST, new Post(R.drawable.post_user_1, R.drawable.post_1, "Dennis Reynolds", "2 hrs ago", "5.2K", "1.1K", "362")),
+            new Item(Constants.ROW_TYPE_POST, new Post(R.drawable.post_user_2, R.drawable.post_2, "Charlie Kelly", "4 hrs ago", "5.2K", "1.1K", "362")),
+            new Item(Constants.ROW_TYPE_POST, new Post(R.drawable.post_user_1, R.drawable.post_1, "Dennis Reynolds", "2 hrs ago", "5.2K", "1.1K", "362")),
+            new Item(Constants.ROW_TYPE_POST, new Post(R.drawable.post_user_2, R.drawable.post_2, "Charlie Kelly", "4 hrs ago", "5.2K", "1.1K", "362"))
 
 
     };

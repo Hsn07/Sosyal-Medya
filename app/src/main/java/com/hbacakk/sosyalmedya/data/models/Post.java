@@ -13,7 +13,7 @@ public class Post {
         this.imageId = imageId;
     }
 
-    public Post(int imageId,int postId, String userName, String time, String like, String message, String post) {
+    public Post(int imageId, int postId, String userName, String time, String like, String message, String post) {
         this.postId = postId;
         this.imageId = imageId;
         this.userName = userName;

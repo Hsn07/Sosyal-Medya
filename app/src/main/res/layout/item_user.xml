@@ -38,7 +38,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <com.makeramen.roundedimageview.RoundedImageView
-                    android:id="@+id/imageFeed"
+                    android:id="@+id/imageProfile"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_margin="@dimen/_3sdp"

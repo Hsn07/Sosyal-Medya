@@ -14,6 +14,8 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.hbacakk.sosyalmedya.R;
 import com.hbacakk.sosyalmedya.databinding.ActivitySplashBinding;
 import com.hbacakk.sosyalmedya.ui.main.MainActivity;
+import com.hbacakk.sosyalmedya.utilities.Constants;
+import com.hbacakk.sosyalmedya.utilities.PreferenceManager;
 import com.hbacakk.sosyalmedya.viewmodels.MainViewModel;
 
 public class SplashActivity extends AppCompatActivity {
@@ -70,6 +72,8 @@ public class SplashActivity extends AppCompatActivity {
             }
         });
         //endregion
+
+        new PreferenceManager(this).putBoolean(Constants.SHOW_IS_SPLASH_SCREEN, true);
     }
 
     private void setupIndicators() {
@@ -115,7 +119,7 @@ public class SplashActivity extends AppCompatActivity {
             if (splashBinding.viewPager.getCurrentItem() + 1 < onboardingAdapter.getItemCount()) {
                 splashBinding.viewPager.setCurrentItem(splashBinding.viewPager.getCurrentItem() + 1);
             } else {
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                startActivity(new Intent(getApplicationContext(), MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
             }
 
         });

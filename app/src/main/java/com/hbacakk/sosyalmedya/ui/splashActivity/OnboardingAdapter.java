@@ -42,7 +42,7 @@ public class OnboardingAdapter extends RecyclerView.Adapter<OnboardingAdapter.Vi
         return onboardingItems.size();
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder {
+    static class ViewHolder extends RecyclerView.ViewHolder {
         ItemOnboardingPagerBinding itemBinding;
 
         public ViewHolder(ItemOnboardingPagerBinding itemBinding) {

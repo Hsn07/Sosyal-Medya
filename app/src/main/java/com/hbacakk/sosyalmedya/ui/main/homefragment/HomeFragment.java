@@ -30,6 +30,11 @@ public class HomeFragment extends BaseFragment<FragmentHomeBinding> {
         // region:
         binding.recyclerViewPosts.setAdapter(new PostAdapter(mainViewModel.getPosts(), getActivity()));
         //endregion
+
+        binding.swipeRefreshLayout.setOnRefreshListener(() -> {
+            binding.swipeRefreshLayout.setRefreshing(true);
+            binding.swipeRefreshLayout.setRefreshing(false);
+        });
     }
 
     @Override

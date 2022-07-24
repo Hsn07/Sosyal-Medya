@@ -21,18 +21,22 @@ public class MainViewModel extends ViewModel {
     }
 
     public ArrayList<OnboardingItem> getOnBoardingItems() {
-        return new ArrayList<OnboardingItem>(Arrays.asList(mainRepository.items));
+        return new ArrayList<>(Arrays.asList(mainRepository.items));
     }
+
     public ArrayList<Item> getPosts() {
-        return new ArrayList<Item>(Arrays.asList(mainRepository.posts));
+        return new ArrayList<>(Arrays.asList(mainRepository.posts));
     }
+
     public ArrayList<Message> getMessages() {
-        return new ArrayList<Message>(Arrays.asList(mainRepository.messages));
+        return new ArrayList<>(Arrays.asList(mainRepository.messages));
     }
+
     public ArrayList<Feed> getMyPost() {
-        return new ArrayList<Feed>(Arrays.asList(mainRepository.mypost));
+        return new ArrayList<>(Arrays.asList(mainRepository.mypost));
     }
+
     public ArrayList<User> getUsers() {
-        return new ArrayList<User>(Arrays.asList(mainRepository.users));
+        return new ArrayList<>(Arrays.asList(mainRepository.users));
     }
 }

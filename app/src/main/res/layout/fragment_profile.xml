@@ -155,30 +155,23 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <LinearLayout
+
+            <com.google.android.material.tabs.TabLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_25ssp"
-                android:layout_marginEnd="@dimen/_25sdp"
-                android:layout_marginBottom="@dimen/_10sdp"
-                android:orientation="horizontal">
+                android:layout_height="match_parent"
+                app:tabIconTint="@drawable/tablayout_icon_color">
 
-                <ImageView
-                    android:id="@+id/imageView3"
+                <com.google.android.material.tabs.TabItem
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/app_name"
-                    android:src="@drawable/ic_saved" />
+                    android:icon="@drawable/ic_photos" />
 
-                <ImageView
-                    android:id="@+id/imageView4"
+                <com.google.android.material.tabs.TabItem
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/app_name"
-                    android:src="@drawable/ic_photos" />
-            </LinearLayout>
+                    android:icon="@drawable/ic_saved"/>
+
+            </com.google.android.material.tabs.TabLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerViewPosts"

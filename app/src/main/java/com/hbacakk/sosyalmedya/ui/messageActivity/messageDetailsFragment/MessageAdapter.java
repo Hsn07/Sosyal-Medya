@@ -1,5 +1,6 @@
 package com.hbacakk.sosyalmedya.ui.messageActivity.messageDetailsFragment;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -22,6 +23,12 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     public MessageAdapter(String senderID, ArrayList<Message> messageArrayList) {
         this.senderID = senderID;
         this.messageArrayList = messageArrayList;
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    public void addItem(Message message) {
+        messageArrayList.add(message);
+        notifyDataSetChanged();
     }
 
     @NonNull

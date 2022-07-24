@@ -3,6 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Hasan/Desktop/Sosyal-Medya/app/src/main/res/drawable/nav_item_color_state.xml" value="0.167" />
+        <entry key="..\:/Users/Hasan/Desktop/Sosyal-Medya/app/src/main/res/drawable/tablayout_icon_color.xml" value="0.167" />
+        <entry key="..\:/Users/Hasan/Desktop/Sosyal-Medya/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Hasan/Desktop/Sosyal-Medya/app/src/main/res/layout/activity_message.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Hasan/Desktop/Sosyal-Medya/app/src/main/res/layout/activity_splash.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Hasan/Desktop/Sosyal-Medya/app/src/main/res/layout/fragment_conversations.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Hasan/Desktop/Sosyal-Medya/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Hasan/Desktop/Sosyal-Medya/app/src/main/res/layout/fragment_home2.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Hasan/Desktop/Sosyal-Medya/app/src/main/res/layout/fragment_message_details.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Hasan/Desktop/Sosyal-Medya/app/src/main/res/layout/fragment_profile.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Hasan/Desktop/Sosyal-Medya/app/src/main/res/layout/item_post.xml" value="0.33" />
+        <entry key="..\:/Users/Hasan/Desktop/Sosyal-Medya/app/src/main/res/layout/item_user.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Hasan/Desktop/SosyalMedya/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1815" />
         <entry key="..\:/Users/Hasan/Desktop/SosyalMedya/app/src/main/res/drawable/bacground_bottom_navigationview.xml" value="0.167" />
         <entry key="..\:/Users/Hasan/Desktop/SosyalMedya/app/src/main/res/drawable/background_bottom_navigationview.xml" value="0.1" />

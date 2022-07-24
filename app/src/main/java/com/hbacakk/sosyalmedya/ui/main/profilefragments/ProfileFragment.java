@@ -1,16 +1,11 @@
 package com.hbacakk.sosyalmedya.ui.main.profilefragments;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.databinding.DataBindingUtil;
-import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import com.hbacakk.sosyalmedya.R;
 import com.hbacakk.sosyalmedya.databinding.FragmentProfileBinding;
@@ -33,7 +28,7 @@ public class ProfileFragment extends BaseFragment<FragmentProfileBinding> {
         mainViewModel = new ViewModelProvider(this).get(MainViewModel.class);
         //endregion
         // region: Post
-        postAdapter=new MyPostAdapter(mainViewModel.getMyPost());
+        postAdapter = new MyPostAdapter(mainViewModel.getMyPost());
         binding.recyclerViewPosts.setAdapter(postAdapter);
         //endregion
     }

@@ -1,5 +1,6 @@
 package com.hbacakk.sosyalmedya.ui.messageActivity.conversationsFragment;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -14,10 +15,13 @@ import java.util.ArrayList;
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
     ArrayList<User> userArrayList;
+    ArrayList<User> sourceUserArrayList;
     ConversationListener listener;
 
     public UserAdapter(ArrayList<User> users) {
+
         this.userArrayList = users;
+        sourceUserArrayList = users;
     }
 
     public void setListener(ConversationListener listener) {
@@ -51,9 +55,26 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
         public void setData(User user) {
             itemUserBinding.setUser(user);
+            itemUserBinding.imageProfile.setImageResource(user.imageId);
             itemUserBinding.userContainer.setOnClickListener(view -> listener.SelectConversation(user));
             itemUserBinding.executePendingBindings();
         }
 
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    public void search(final String searchKeyword) {
+        if (searchKeyword.trim().isEmpty()) {
+            userArrayList = sourceUserArrayList;
+        } else {
+            ArrayList<User> temp = new ArrayList<>();
+            for (User user : sourceUserArrayList) {
+                if (user.getUserName().toLowerCase().trim().contains(searchKeyword.toLowerCase())) {
+                    temp.add(user);
+                }
+            }
+            userArrayList = temp;
+        }
+        notifyDataSetChanged();
     }
 }
