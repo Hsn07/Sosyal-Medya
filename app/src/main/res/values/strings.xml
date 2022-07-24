@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Sosyal Medya</string>
+
+    <string name="next">Next</string>
+    <string name="messages">Messages</string>
+    <string name="search_for_contacts">Search for contacts</string>
+    <string name="socially">Socially</string>
+    <string name="online">Online</string>
+    <string name="write_a_message">Write a message...</string>
+    <string name="username">\@jhondoe</string>
+    <string name="name">Jhon Doe</string>
+    <string name="posts">Posts</string>
+    <string name="example_post">33</string>
+    <string name="followers">Followers</string>
+    <string name="followers_count">1,552</string>
+    <string name="follows">Follows</string>
+    <string name="follows_count">28</string>
+    <string name="welcome">Welcome</string>
+    <string name="home">Home</string>
+    <string name="message">Message</string>
+    <string name="favorite">Favorite</string>
+    <string name="profile">Profile</string>
+</resources>
