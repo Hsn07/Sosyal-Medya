@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/message_graph"
+    app:startDestination="@id/userFragment">
+
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.hbacakk.sosyalmedya.ui.messageActivity.conversationsFragment.ConversationsFragment"
+        android:label="UserFragment">
+        <action
+            android:id="@+id/action_userFragment_to_messageDetailsFragment"
+            app:destination="@id/messageDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/messageDetailsFragment"
+        android:name="com.hbacakk.sosyalmedya.ui.messageActivity.messageDetailsFragment.MessageDetailsFragment"
+        android:label="MessageDetailsFragment">
+        <argument
+            android:name="user"
+            app:argType="com.hbacakk.sosyalmedya.data.models.User" />
+        <action
+            android:id="@+id/action_messageDetailsFragment_to_userFragment"
+            app:destination="@id/userFragment" />
+
+    </fragment>
+</navigation>
